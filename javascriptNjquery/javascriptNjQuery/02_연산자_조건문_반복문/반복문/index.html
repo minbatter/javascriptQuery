@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>반복문 종류</title>
+    <!-- <script src="./js/script.js"></script> -->
+</head>
+<body>
+
+    <button onclick="colorBackground()">배경색 변경 버튼</button>
+
+    <h1>반복문</h1>
+    <h2>for</h2>
+    <ul id="for">
+
+    </ul>
+
+    <h2>forEach</h2>
+    <ul id="forEach">
+
+    </ul>
+
+    <h2>for of</h2>
+    <ul id="forof">
+
+    </ul>
+
+    <h2>for in</h2>
+    <ul id="forin">
+
+    </ul>
+
+    <h2>do/while</h2>
+    <ul id="dowhile">
+
+    </ul>
+
+    <script>
+
+        const colors = ['yellow', 'aqua', 'pink', 'red', 'blue', 'orange', 'deeppink'];
+        let cnt = 0;
+
+        function colorBackground() {
+            const bodyTag = document.getElementsByTagName('body')[0];
+            bodyTag.style.backgroundColor = colors[cnt++ % colors.length];
+        }
+
+
+        let fruits=["cherry", "apple", "banana", '파일애플', '땰기'];
+
+        //document.getElementById("for").innerText = '하하';
+        for( let i=0; i < fruits.length; i++ ) {
+            document.getElementById("for").innerHTML += `<li>${fruits[i]}</li>`;
+        }
+
+        const $for = document.querySelectorAll('#for li');
+        //console.log($for);
+        for( let i=0; i < $for.length; i++ ) {
+            $for[i].style.color = colors[i];
+        }
+
+        //forEach 반드시 배열이여야 함
+        //fruits.forEach(fruit, index, array) - 원형
+        //fruits.forEach((fruit, index, array) => {
+        //   document.getElementById("forEach").innerHTML += `<li>${fruit}</li>`;
+        //})
+
+        fruits.forEach(function(fruit, index, array) {
+            //document.getElementById("forEach").innerHTML += `<li>${fruit}</li>`;
+            //console.log(`Array = [${array}]`);
+            document.getElementById("forEach").innerHTML += `<li>${fruits[index]}</li>`;
+        });
+
+        const $forEach = document.querySelectorAll('#forEach li');
+        //console.log($forEach);
+        $forEach.forEach(function(item, index) {
+            item.style.color = 'red';
+            $forEach[index].addEventListener('mouseover', function() { 
+                this.style.color = 'green';
+            });
+
+            $forEach[index].addEventListener('mouseout', function() { 
+                this.style.color = 'orange';
+            });
+            
+        });
+
+
+        //console.log(fruits);
+        //for of        
+        let item;
+        for(item of fruits) {
+            //console.log(item);
+            document.getElementById('forof').innerHTML += `<li>${item}</li>`;
+        };
+
+        const $forof = document.querySelectorAll('#forof li');
+        let foro;
+
+        for( foro of $forof ) {
+            console.log(`foro : ${foro}`);
+            foro.addEventListener('mouseover', function() {
+                this.style.color = 'red';
+                this.style.backgroundColor = 'yellow'
+            });
+
+            foro.addEventListener('mouseout', function() {
+                this.style.color = 'green';
+                this.style.backgroundColor = 'white'
+            });
+        }
+
+        //dowhile
+        let dowh = 0;
+        do {
+            document.getElementById('dowhile').innerHTML += `<li>${fruits[dowh]}</li>`;
+            dowh++;
+        } while(dowh < fruits.length);
+
+        const $dowhile = document.querySelectorAll('#dowhile li');
+        let dowh1 = 0;
+        do {
+            $dowhile[dowh1].style.color='blue';
+
+            $dowhile[dowh1].addEventListener('mouseover', function(){
+                this.style.color='red';
+                this.style.backgroundColor ='aqua';
+            });
+
+            $dowhile[dowh1].addEventListener('mouseout', function(){
+                this.style.color='pink';
+                this.style.backgroundColor ='white';
+            });
+
+
+
+            dowh1++;
+
+
+        } while(dowh1 < $dowhile.length )
+
+        //for in 객체 내의 값들마다 할일(property + method) Object
+        let person = {pname:'ssun', page:'44', pgender:'메일'};
+        let y;
+        for( y in person ) {
+            document.getElementById('forin').innerHTML += `<li>${y}:${person[y]}</li>`;
+        }
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>객체편집 메서드</title>
+    <link rel="stylesheet" href="./css/style1.css">
+    <script src="./js/lib/jquery-1.12.4.min.js" ></script>
+    <script src="./js/script1.js" defer></script>
+</head>
+<body>
+    <h2>객체편집 메서드</h2>
+    <div id="wrap">
+        <div class="box">
+            <h2>>객체편집 메서드</h2>
+            <div class="content content1">
+                <h3>before/after/insertBefore/insertAfter</h3>
+                <div class="after">
+                    <p>나는 내용이다1</p>
+                    <p>나는 내용이다2</p>
+                    <p>나는 내용이다3</p>
+                </div>
+            </div>
+
+            <div class="content content2">
+                <h3>append/appendTo/prepend/prependTo</h3>
+                <div class="append">
+                    <div id="basket">basket</div>
+                    <div id="apple">apple</div>
+                    <div id="banana">banana</div>
+                    <div id="orange">orange</div>
+                </div>
+            </div>
+
+            <div class="content content3">
+                <h3>show/hide</h3>
+                <div id="div1">처음부터 보이지 않는 div</div>
+                <div id="div2">처음부터 보이는 div</div>
+            </div>
+
+            <div class="content content4">
+                <h3>toggle</h3>
+                <button id="btn">Toggle</button>
+                <img src="./img/imag.jpg" alt="이미지">
+            </div>
+
+            <div class="content content5">
+                <h3>fadeIn/faseOut</h3>
+                <div class="container">
+                    <div id="fade1">fasdIn example</div>
+                </div>
+                <div class="container">
+                    <div id="fade2">fasdIn example</div>
+                </div>
+                <div class="container">
+                    <div id="fade3">fasdTo example</div>
+                </div>
+            </div>
+
+            <div class="content content6">
+                <h3>slideDown/slideUp</h3>
+                <div class="container">
+                    <div id="slide1">slideDown example</div>
+                </div>
+                <div class="container">
+                    <div id="slide2">slideUp example</div>
+                </div>
+                
+                <div class="container">
+                    <div id="slide3">마우스올렸을때 내렸을때</div>
+                </div>
+
+            </div>
+
+            <div class="content content7">
+                <h3>animate1</h3>
+                <div class="box1">box</div>
+            </div>
+
+            <div class="content content8">
+                <h3>animate2</h3>
+                <div class="box2">box</div>
+                <div class="box3">box</div>
+            </div>
+
+            <div class="box">
+                <h2>이벤트</h2>
+                <div class="content content9">
+                    <h3>on그룹등록메서드 방법1</h3>
+                    <button class="btn1">on 버튼1</button>
+
+                    <h3>on그룹등록메서드 방법2</h3>
+                    <button class="btn2">on 버튼2</button>
+
+                    <h3>on그룹등록메서드 방법3</h3>
+                    <button class="btn3">on 버튼3</button>
+                </div>
+            </div>
+
+            <div class="content content10">
+                <h3>trigger(강제)</h3>
+                <p>
+                    <button class="btn4">버튼 1</button>
+                </p>
+                <p>나는 내용1이야</p>
+                <p><button class="btn5">버튼 2</button></p>
+                <p>나는 내용2이야</p>
+            </div>
+
+            <div class="content content11">
+                <h3>preventDefault() 기본 이벤트 차단</h3>
+                <p>
+                    <a href="http://www.daum.net" class="btn6" target="_blank" >버튼1</a>
+                </p>
+                <p class="txt1" >나는 내용1이야</p>
+                <p>
+                    <a href="http://www.naver.com" class="btn7">버튼2</a>
+                </p>
+                <p class="txt2" >나는 내용2이야</p>
+
+                <p>
+                    <a href="javascript:void" class="btn9">버튼4</a>
+                </p>
+                <p class="txt4" >나는 내용2이야</p>
+                
+                <p><button class="btn8">button3</button></p>
+                <p class="txt3" >나는 내용3이야</p>
+                
+
+            </div>
+
+            <div class="content content12">
+                <h3>여러개의 클릭이벤트</h3>
+                <div class="click" style="background-color: pink;padding: 10px; margin-bottom: 3px;">click!!!!</div>
+                <div class="click" style="background-color: pink;padding: 10px; margin-bottom: 3px;">click!!!!</div>
+                <div class="click" style="background-color: pink;padding: 10px; margin-bottom: 3px;">click!!!!</div>
+                <div class="click" style="background-color: pink;padding: 10px; margin-bottom: 3px;">click!!!!</div>
+                <div class="click" style="background-color: pink;padding: 10px; margin-bottom: 3px;">click!!!!</div>                
+
+                <h3>hover</h3>
+                <div class="hover" style="background-color: pink;padding: 10px; margin-bottom: 3px;">hover!!!!</div>
+
+                <h3>mouseenter/mouseleave</h3>
+                <div class="mouseenter" style="background-color: pink;padding: 10px; margin-bottom: 3px;">mouseenter!!!!</div>
+
+                <h3>mouseover/mouseout</h3>
+                <div class="mouseover" style="background-color: pink;padding: 10px; margin-bottom: 3px;">mouseover!!!!</div>
+
+                <h3>focus/blue</h3>
+                <input type="text" id="input1">
+
+            </div>
+
+            <div class="box">
+                <div class="content content13">
+                    <h3>each</h3>
+                    <div class="animal">cat</div>
+                    <div class="animal">dog</div>
+                    <div class="animal">turtle</div>
+                    <div class="animal">tiger</div>
+
+                    <h3>값 취득하기</h3>
+                    <div class="box11">값취득</div>
+                    <span class="span1"></span> <br>
+                    <span class="span2"></span> <br>
+                    <span class="span3"></span> <br>
+                    <span class="span4"></span> <br>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

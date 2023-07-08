@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카카오 로그인</title>    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    
+</head>
+<body>
+    <div class="flex">
+        <div class="login-wrap">
+            <div class="login-inner">
+                <h2>로그인</h2>
+                <form action="#">
+                    <input type="text" placeholder="ID">
+                    <input type="password" placeholder="PW">
+                </form>
+                <button><div id="login-button" type="button">로그인</div></button>
+                <p class="or">또는</p>
+                <section class="social">
+                    <button class="social-button kakao" type="button" onclick="kakaoLogin()"><img src="imgs/kakao_login.png" alt="카카오로 로그인 하기"></button>
+                </section>
+            </div>
+        </div>
+    </div>
+
+<script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+<script>
+   Kakao.init('2be9ed4d674e91bf9e2b14527ed70808'); // 사용하려는 앱의 JavaScript 키 입력
+
+    function kakaoLogin(){
+        Kakao.Auth.login({
+            scope:'profile_nickname, account_email, gender',
+            success:function(authObj){
+                Kakao.API.request({
+                    url: '/v2/user/me',
+                    success:res =>{
+                        const kakao_account=res.kakao_account;
+                    }
+                })
+            }
+        })
+    }
+
+
+
+    </script>
+
+</body>
+</html>

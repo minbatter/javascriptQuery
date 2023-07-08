@@ -1,0 +1,10 @@
+#wrap { width: 100%; margin: 100px;}
+#wrap #nav {display: flex;}
+#wrap #nav li { text-align:center; cursor: pointer; display: flex; align-items: center; height: 97px;}
+#wrap #nav li .menu-image {width: 0; overflow: hidden;}
+
+#wrap #nav li .text-image  { text-align: center; }
+
+#wrap #nav li .text-image .on { display: none; }
+#wrap #nav li .text-image>div { padding: 10px; }
+

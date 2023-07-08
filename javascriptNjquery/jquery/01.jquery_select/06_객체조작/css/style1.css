@@ -1,0 +1,30 @@
+*{margin: 0; padding: 0;}
+body{ background: #ddd;}
+#wrap { width: 1000px; margin: 20px auto; padding: 20px;}
+.box { background: #fff; padding: 20px; margin-bottom: 10px;}
+h2 {text-align: center;}
+.content{border: 3px solid blue; padding: 10px; margin-bottom: 10px;}
+h3 {margin-bottom: 20px;}
+
+.after{width: 500px; height: 250px; margin: 30px auto;
+}
+.after p { margin-bottom: 5px; border: 1px solid #ddd; padding: 5px 20px;}
+
+.append{ width: 500px; margin: 20px auto; color: #fff;}
+
+#basket {background: #b6701a; padding: 10px; }
+#apple {background: red; padding: 5px; margin: 5px;}
+#banana {background: yellow; padding: 5px; margin: 5px;}
+#orange {background: orange; padding: 5px; margin: 5px;}
+
+.content3 >div{border: 3px solid yellowgreen; margin-bottom: 5px;}
+.content3 > #div1 {display: none;}
+.content4 { height: 400px; }
+.content4 #btn{
+    display: block;
+    padding: 1opx 20px;
+    margin-bottom: 10px;
+    border: none;
+}
+
+.content4 img { display: none;}

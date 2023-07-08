@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>회원가입</title>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<meta name='Title' content=''>
+<meta name='Subject' content=''>
+<meta name='Keywords' content=''>
+<meta name='Author' content=''>
+<meta name='Publisher' content=''>
+<meta name='Description' content=''>
+<meta name='Author-Date' content=''>
+<meta name='Copyright' content=''>
+
+<!-- 접근성 텍스트(skip) 숨김 -->
+<style>
+    #skip  { overflow: hidden; position:absolute; width:0; height:0; line-height:0; text-indent:-9999px; }
+    .ir_so { overflow: hidden; position:absolute; width:0; height:0; line-height:0; text-indent:-9999px; }
+</style>
+
+<!-- 폰트어썸 -->
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+
+<!-- 구글폰트 아이콘 -->
+<link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0' />
+
+<!-- CSS 리셋 -->
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css'>
+
+<!-- 제이쿼리 3.7 CDN -->
+<script src='https://code.jquery.com/jquery-3.7.0.min.js' crossorigin='anonymous'></script>
+
+<!-- 로컬 CSS -->
+<link rel='stylesheet' href='./css/style.css'/>
+
+<!-- 로컬 js -->
+<script src='./js/script.js' defer></script>
+
+</head>
+<body>
+<!-- 시각장애인 웹 접근성을 위한 skip _ 지우지않아도 됩니다. -->
+
+<ul id='skip'>
+   <li><a href='#header'>헤더 바로가기</a></li>
+   <li><a href='#nav'>메뉴 바로가기</a></li>
+   <li><a href='#content'>내용 바로가기</a></li>
+</ul>
+
+<div class="form">
+    <h3>회원가입</h3>
+    <fieldset>
+        <legend class="ir_so">회원가입</legend>
+        <form action="./login.html" id="signup" name="signup" method="post">
+            <ul>
+                <li class="id-section">
+                    <!-- label for 이름과 input의 이름을 동일하게  -->
+                    <label for="idArea">아이디</label> 
+                    <span id="idMes" class="bmessage"></span>
+                    <input type="text" id="idArea" class="line" required size="30" placeholder="아이디">
+                    <button>중복확인</button>
+                </li>
+                <li>
+                    <!-- label for 이름과 input의 이름을 동일하게 하면 -->
+                    <label for="pwArea">비밀번호</label> 
+                    <span id="pwMes" class="message"></span>
+                    <input type="password" id="pwArea" class="line" required size="30" placeholder="비밀번호">
+                    
+                </li>
+                <li>
+                    <!-- label for 이름과 input의 이름을 동일하게 하면 -->
+                    <label for="pwArea2">비밀번호확인</label> 
+                    <span id="pwMes2" class="message"></span>
+                    <input type="password" id="pwArea2" class="line" required size="30" placeholder="비밀번호확인">
+                </li>
+                <li>
+                    <!-- label for 이름과 input의 이름을 동일하게 하면 -->
+                    <label for="name">이름</label> 
+                    <span id="nameMes" class="message"></span>
+                    <input type="text" id="name" class="line" required size="30" placeholder="이름">
+                </li>
+                <li>
+                    <!-- label for 이름과 input의 이름을 동일하게 하면 -->
+                    <label for="phone">핸드폰</label> 
+                    <span id="phMes" class="message"></span>
+                    <input type="text" id="phone" class="line" required size="30" placeholder="숫자만 입력해주세요">
+                </li>
+                <li>
+                    <!-- label for 이름과 input의 이름을 동일하게 하면 -->
+                    <label for="email">이메일</label> 
+                    <span id="eMes" class="message"></span>
+                    <input type="text" id="email" class="line" required size="30" placeholder="이메일 주소">
+                </li>
+                <li>
+                    <!-- label for 이름과 input의 이름을 동일하게 하면 -->
+                    <label for="born">생년월일</label> 
+                    <span id="bMes" class="message"></span>
+                    <input type="text" id="born" class="line" required size="8" placeholder="8자리 입력">
+                </li>
+                <li>
+                    <span class="genderArea">성별</span>
+                    <input type="radio" name="gender" id="female">
+                    <label for="female" class="gender female">여성</label>
+                    <input type="radio" name="gender" id="male">
+                    <label for="male" class="gender">남성</label>
+                    <span id="gMes" class="gender-message"></span>
+                </li>
+                <li>
+                    <input type="text" value="회원가입" class="btn" id="submit">
+                </li>
+            </ul>
+        </form>
+    </fieldset>
+</div>
+
+
+</body>
+</html>

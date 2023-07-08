@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">    
+    <title>javascript Selector</title>
+</head>
+<body>
+
+    <h1 id="title">javascript Selector</h1>
+    <div class="container">
+        <ul id="list1" class="list">
+            <li>li 1</li>
+            <li>li 2</li>
+            <li>li 3</li>
+            <li>li 4</li>
+            <li>li 5</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <ul id="list2" class="list">
+            <li>li 1</li>
+            <li>li 2</li>
+            <li>li 3</li>
+            <li>li 4</li>
+            <li>li 5</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <ul id="list3" class="list">
+            <li class="red">li 1</li>
+            <li>li 2</li>
+            <li>li 3</li>
+            <li id="list3-4">li 4</li>
+            <li>li 5</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <div id="box">
+            box level1
+            <div class="red">
+                box level2
+                <div>
+                    box level3
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <p>
+       Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+       Dolorem optio in tenetur temporibus odit nesciunt dolore hic aliquam soluta voluptatum excepturi rerum dolor libero, 
+       aut maiores consequatur quasi, dolores voluptas.
+    </p>
+    <p>
+       Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+       Dolorem optio in tenetur temporibus odit nesciunt dolore hic aliquam soluta voluptatum excepturi rerum dolor libero, 
+       aut maiores consequatur quasi, dolores voluptas.
+    </p>
+    <p>
+       Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+       Dolorem optio in tenetur temporibus odit nesciunt dolore hic aliquam soluta voluptatum excepturi rerum dolor libero, 
+       aut maiores consequatur quasi, dolores voluptas.
+    </p>
+
+    <script>
+        const firstTitle  = document.getElementById('title');
+        const container   = document.getElementsByClassName('container');
+        //const list        = document.getElementsByClassName('list');
+        const lists       = document.querySelectorAll('.list');
+        const paragraphs  = document.getElementsByTagName('p');
+        //const red         = document.querySelector('#list3 .red');
+        const red         = document.querySelector('#list3 li:nth-child(1)');
+        const red1        = document.querySelector('#box .red');
+
+        red1.style.color = 'blue';
+
+        firstTitle.style.fontSize  = "100px";
+        firstTitle.style.textAlign = "center";
+        firstTitle.style.color     = 'red';
+
+        // container[0].style.border = '1px solid #f00';
+        // container[1].style.border = '1px solid #f00';
+        // container[1].style.margin = '10px 0';
+        // container[2].style.border = '1px solid #f00';
+
+        // for( let i=0; i < container.length; i++ ) {
+        //     container[i].style.border = '1px solid #f00';
+        //     container[i].style.marginBottom = '10px';
+        // }
+
+        for( let con of container )  {
+            con.style.border = '1px solid #f00';
+            con.style.margin = '5px';
+        }
+
+        // lists.forEach(function(list) { 
+        //     list.style.color = 'red';
+        // });
+        // arrow function 파라메터 1개시 () 생략가능
+        lists.forEach(list => {
+             list.style.color = 'green';
+        });
+
+        for( let para of paragraphs ) {
+            para.style.backgroundColor = 'yellow'
+        }
+        paragraphs[0].style.background = 'pink';
+        paragraphs[1].style.background = 'deeppink';
+        paragraphs[2].style.background = 'blue';
+        
+
+        red.style.color = 'pink';
+
+
+
+
+
+
+
+    </script>
+
+
+
+</body>
+</html>

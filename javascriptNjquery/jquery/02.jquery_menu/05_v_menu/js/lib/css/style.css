@@ -1,0 +1,17 @@
+body{width: 200px; margin: 20px auto;}
+
+a {color: #fff; text-decoration: none;}
+
+#nav{width: 200px; text-indent: 10px; }
+
+#nav>li{margin-bottom: 2px; list-style-type: none; }
+
+#nav>li>div { height: 35px; background: #8a6161; line-height: 35px;} 
+
+#nav>li>div>a{ display: block; width: 100%; height: 100%;}
+
+#nav>li>.sub { display: none; }
+
+#nav>li>.sub li{ height: 35px; background: #ceb7b7; line-height: 35px; margin-bottom: 1px;}
+
+#nav>li>.sub li a { color: #544242; }

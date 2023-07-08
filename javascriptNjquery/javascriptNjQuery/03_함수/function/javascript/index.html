@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script>
+        // scrpit 실행중에 DOM이 안될수 있어서 onload처리를 한다.
+        window.onload=function() {
+            let listZone = document.getElementById("innerList");
+            let listA    = listZone.getElementsByTagName('a');
+
+            for( let i=0; i< listA.length; i++ ) {
+                listA[i].onclick = function() {
+                    let photo = document.getElementById("photo").children[0];
+                    photo.src = this.href;
+                    return false;
+                }
+            }
+
+            const prevBtn = document.getElementById("prevBtn");
+            const nextBtn = document.getElementById("nextBtn");
+
+            let num = 0;
+            nextBtn.addEventListener('click', function(){
+                num++;
+
+                if( num >= listA.length -3 ) {
+                    return false;
+                }
+                listZone.style.marginLeft = -100*num + "px";
+
+                console.log(`NUM = [${num}]`);
+                return false;
+                
+            });
+
+            prevBtn.addEventListener('click', function(){
+                console.log(`PREV NUM : ${num}`);
+                if( num > 5) num = 5;
+
+                if( num <=  0 ) {
+                    return false;
+                }
+
+                num--;
+
+                listZone.style.marginLeft = -100*num + "px";
+                return false;
+                console.log(`NUM = [${num}]`);
+            });
+        }
+    </script>
+</head>
+<body>
+    <div id="gallery">
+        <h1>동해안 갤러리</h1>
+        <p id="photo">
+            <img src="./images/pic_1.jpg" width="320" alt="큰이미지1">
+        </p>
+        <div id="photoList">
+            <ul id="innerList">
+                <li>
+                    <a href="./images/pic_1.jpg"><img src="./images/pic_t1.jpg" alt=""></a>
+                </li>
+                <li>
+                    <a href="./images/pic_2.jpg"><img src="./images/pic_t2.jpg" alt=""></a>
+                </li>
+                <li>
+                    <a href="./images/pic_3.jpg"><img src="./images/pic_t3.jpg" alt=""></a>
+                </li>
+                <li>
+                    <a href="./images/pic_4.jpg"><img src="./images/pic_t4.jpg" alt=""></a>
+                </li>
+                <li>
+                    <a href="./images/pic_5.jpg"><img src="./images/pic_t5.jpg" alt=""></a>
+                </li>
+                <li>
+                    <a href="./images/pic_6.jpg"><img src="./images/pic_t6.jpg" alt=""></a>
+                </li>
+                <li>
+                    <a href="./images/pic_7.jpg"><img src="./images/pic_t7.jpg" alt=""></a>
+                </li>
+                <li>
+                    <a href="./images/pic_8.jpg"><img src="./images/pic_t8.jpg" alt=""></a>
+                </li>
+            </ul>
+        </div>
+        <p class="btn-wrap">
+            <a href="#" id="prevBtn">&lt;</a>
+            <a href="#" id="nextBtn">&gt;</a>
+        </p>
+    </div>
+    
+</body>
+</html>

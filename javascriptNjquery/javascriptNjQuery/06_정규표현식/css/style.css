@@ -1,0 +1,84 @@
+.form {
+  width: 1000px;
+  margin: 50px auto;
+}
+.form h3 {
+  color: #333;
+  font-size: 40px;
+  text-align: center;
+  padding: 20px 0 35px;
+  border-bottom: 1px solid #c7c7c7;
+  font-weight: 600;
+}
+.form fieldset #signup {
+  width: 600px;
+  margin: 0 auto;
+  padding-top: 70px;
+}
+.form fieldset #signup ul li {
+  position: relative;
+  padding: 10px 0;
+}
+.form fieldset #signup ul li label {
+  color: #222;
+  font-size: 20px;
+}
+.form fieldset #signup ul li span {
+  color: #cb3b3b;
+}
+.form fieldset #signup ul li input {
+  display: block;
+  width: 100%;
+  padding: 16px 10px;
+  box-sizing: border-box;
+  margin: 5px 0 25px 0;
+  border: none;
+  border-bottom: 1px solid #c7c7c7;
+}
+.form fieldset #signup ul li input:focus {
+  outline: none;
+}
+.form fieldset #signup ul li:nth-child(9) input {
+  border-bottom: none;
+}
+.form fieldset #signup ul li.id-section {
+  position: relative;
+}
+.form fieldset #signup ul li.id-section button {
+  position: absolute;
+  display: block;
+  padding: 5px 8px;
+  font-size: 15px;
+  cursor: pointer;
+  bottom: 45px;
+  right: 10px;
+  background: #aaa;
+  border: none;
+  color: white;
+}
+.form fieldset #signup ul li .genderArea {
+  font-size: 20px;
+  color: #000;
+  display: block;
+  margin-bottom: 20px;
+}
+.form fieldset #signup ul li input[type=radio] {
+  display: inline-block;
+  width: auto;
+  padding: 0px 0px;
+  box-sizing: border-box;
+  margin: 0;
+  border: none;
+  border-bottom: none;
+}
+.form fieldset #signup ul li label.gender {
+  color: #222;
+  font-size: 16px;
+}
+.form fieldset #signup ul li #submit {
+  text-align: center;
+  width: 100%;
+  background: #cb3b3b;
+  color: #fff;
+  font-weight: bold;
+}/*# sourceMappingURL=style.css.map */

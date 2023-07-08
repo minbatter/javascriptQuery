@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>함수</title>
+
+    <style>
+        #gelleryWrap     { text-align: center; }
+        #gelleryWrap p   { display: flex; justify-content: center; align-items: center;}
+        #gelleryWrap p a { text-decoration: none; font-size: 50px; color: red; }
+    </style>
+
+    <!-- <script src="./js/script.js" defer></script> DOM 구조 사용 -->
+    <!-- <script src="./js/script.js"></script>  -->
+
+</head>
+<body>
+
+    <input type="button" value="인쇄하기" onclick="window.print()">
+
+    <h2>함수 정의하기</h2>
+    <pre>
+        함수이름()
+        function 함수이름() {
+            문장
+        }
+    </pre>
+
+    <h2>내장 함수</h2>
+    <h2>시간에 따른 메소드</h2>
+    <ul>
+        <li>
+            <p>시간에 따라 명령을 수행하게 해주는 메소드</p>
+            setTimeout(a,b); - a: 함수나 명령어, b: 지연시간(1/1000초 단위)
+            clearTimeout(a); - 내용중지
+        </li>
+        <li>
+            <p>시간에 따라 반복하여 명령을 수행하게 해주는 메소드</p>
+            setInterval(a,b); - a: 함수나 명령어, b: 지연시간(1/1000초 단위)
+            clearInterval(a); - 내용중지
+        </li>
+    </ul>
+
+    <h2>내장 함수</h2>
+    <ul>
+        <li>parseInt() - 문자형 데이터를 정수형 데이터로 바꿈 (소숫점 없이)</li>
+        <li>parseFloat() - 문자형 데이터를 실수형 데이터로 바꿈 (소숫점 있는)</li>
+        <li>String() - 문자형 데이터로 바꿈</li>
+        <li>Number() - 숫자형 데이터로 바꿈</li>
+        <li>Boolean() - 논리형 데이터로 바꿈</li>
+        <li>IsNaN() - 'Not a Number' 숫자가 아닌 문자를 포함하면 true 값 반환</li>
+        <li>eval() - 문자형 데이터를 큰따옴표가 없는 스크립트 코드로 처리하고 산술연산 해줌</li>
+        <li>alert() - 경고창</li>
+        <li>confirm() - 확인/취소창(true/false)</li>
+        <li>prompt() - 입력 대화상사를 만들어 줌(묻고 답하는)</li>
+    </ul>
+
+    <hr>
+    <br>
+    <form name="time_form">
+        <input type="text" name="clock" size="12" value="Time">
+    </form>
+
+    <br>
+    <hr>
+
+    <div id="gelleryWrap">
+        <h1>이미지 넘기기</h1>
+        <p>
+            <!-- javascript:, #; -->
+            <a href="#;" onclick="prevGallery()" >&lt;</a> 
+            <img src="function/img/img1.jpg" alt="gallery" width="300" height="200" id="gallery">
+            <a href="javascript:" onclick="nextGallery()" >&gt;</a>
+        </p>
+
+    </div>
+
+    <script>
+
+        function startClock() {
+            let now = new Date();
+            // console.log(`NOW [${now}]`)
+            let hours = now.getHours();
+            //console.log(`Hours [${hours}]`)
+            let minutes = now.getMinutes();
+            console.log(`Minutes [${minutes}]`);
+            let seconds = now.getSeconds();
+            console.log(`Seconds [${seconds}]`);
+            let date = now.getDate(); // 일자
+            console.log(`Date [${date}]`);
+
+            if( seconds < 10 ) seconds = "0" + seconds;
+            if( minutes < 10 ) minutes = "0" + minutes;
+            if( date    < 10 ) date    = "0" + date;
+
+            if( hours < 12 ) minutes += " A.M";
+            else if( hours >= 12 ) minutes += " P.M";
+
+            if( hours == 0 ) hours += 12;
+            else if( hours > 12 ) hours -= 12;
+
+            let time = hours + ":" + minutes + ':' + seconds;
+            console.log(`TIME : ${time}`);
+            document.time_form.clock.value = time;
+
+            setTimeout("startClock()", 100);
+
+        }
+
+       startClock();
+
+       //이미지 넘기기
+       let num=1;
+       function nextGallery() {
+            num++;
+            if( (num % 7) == 0 ) num = 1;
+
+            document.getElementById("gallery").src = "function/img/img" + num + ".jpg" ;
+
+            return false; // a태크의 href의 기능을 하지 않도록
+       };
+
+       function prevGallery() {
+            num--;
+            if( num == 0 ) num = 7;
+
+            document.getElementById("gallery").src = "function/img/img" + num + ".jpg" ;
+
+            return false; // a태크의 href의 기능을 하지 않도록
+       };
+
+
+    </script>
+    
+
+</body>
+</html>

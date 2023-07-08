@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/lib/jquery-1.12.4.min.js" ></script>
+    <script src="./js/script.js" defer></script>
+</head>
+<body>
+    <div id="wrap">
+        <div class="box box1">
+            <h2>속성 조작 메소드</h2>
+            <h3>html/text</h3>
+            <div class="content1 content">
+                <div id="content1-1">안에 들어있는 텍스트</div>
+                <div id="content1-2">안에 들어있는 텍스트</div>
+                <div id="content1-3">안에 들어있는 텍스트</div>
+                <div id="content1-4">안에 들어있는 텍스트</div>
+            </div>
+            <h3>2.attr</h3>
+            <div class="content2 content">
+                <img src="./img/img1.gif" alt="">
+                <img src="./img/img1.gif" alt="" id="changeThis">
+                <img src="./img/img1.gif" alt="">
+                <img src="./img/img1.gif" alt="">
+            </div>
+            <h3>3.addClass&removeClass</h3>
+            <div class="content3 content">
+                <div class="content3-1 add">addClassNremoveClass1</div>
+                <div class="content3-2">addClassNremoveClass2</div>
+                <div class="content3-3">addClassNremoveClass3</div>
+                <div class="content3-4">addClassNremoveClass4</div>
+            </div>
+            <h3>4.toggleClass</h3>
+            <div class="content4 content">
+                <p id="imgs">
+                    <img src="img/img.jpg" alt="" class="imgToggle">
+                </p>
+                <button class="click">click!!!</button>
+            </div>
+            <h3>5.val</h3>
+            <div class="content5 content">
+                <form action="#" method="get" >
+                    <input type="text"  size="40" value= "텍스트필드입니다." id="input1">
+                    <textarea name="textarea1" id="textarea1" cols="30" rows="10">
+                        textarea1 영역입니다.
+                    </textarea>
+                    <select id="select1">
+                        <option value="city1">서울</option>
+                        <option value="city2">부산</option>
+                        <option value="city3">대전</option>
+                    </select>
+                    <select id="select2" multiple="multiple">
+                        <option value="town1">동구</option>
+                        <option value="town2">중구</option>
+                        <option value="town3">서구</option>
+                    </select>
+                    
+                </form>
+            </div>
+        </div>
+
+        <div class="box box2">
+            <h2>수치 조작 메서드</h2>
+            <h3>height/width/innerHeight/outerHeight</h3>
+            <div class="content content6">
+                <p id="p1"><img src="./img/img1.jpg" alt=""></p>
+                <p id="p2"><img src="./img/img.png" alt=""></p>
+
+                <div class="width">width : <span></span></div>
+                <div class="width1">innerwidth : <span></span></div>
+                <div class="width2">outerwidth : <span></span></div>
+            </div>
+
+            <h3>position</h3>
+            <div class="content content7">
+                <p class="cnt">박스</p>
+            </div>
+            <p class="text_1">절대 top위치값 : <span></span></p>
+            <p class="text_2">상대 top위치값 : <span></span></p>
+
+            <h3>scrollTop</h3>
+            <div class="content content8">
+                <h1 class="top">위치 메소드</h1>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
