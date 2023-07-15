@@ -1,0 +1,13 @@
+#wrap{ width: 960px; margin: 50px auto; }
+#wrap ul{display: flex;}
+#wrap ul li:not(:last-child){ margin-right: 5px; }
+
+/* #wrap ul li:last-child{ margin-right: 0; } */
+#wrap ul li a{ text-transform: uppercase; padding: 10px 20px; 
+               display: inline-block; background: #ddd; text-decoration: none;}
+#wrap ul li a.active{ background: #b9ab9d; color: #fff;}
+#wrap #tabContent{width: 100%; background: #82a7b0; padding: 30px; box-sizing: border-box;}
+#wrap #tabContent>div{display: none;}
+#wrap #tabContent>div:first-child{display: block;}
+
+#wrap #tabContent>div h2 {margin: 20px 0; color: red; font-size: 1.5em;}

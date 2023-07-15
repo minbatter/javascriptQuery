@@ -51,5 +51,27 @@ console.log(user1);
 console.log(user2);
 console.log(user3);
 
+const cookie = {
+    base:'cookie',
+    madein:'korea'
+}
+const chococookie = {
+    ...cookie,
+    toping:'choco'
+}
+const blueberrycookie = {
+    ...cookie,
+    toping:'buleberry'
+}
+const strawberrycookie = {
+    ...cookie,
+    toping:'strawberry'
+}
+
+console.log(chococookie);
+console.log(blueberrycookie);
+console.log(strawberrycookie);
+
+
 
 
