@@ -57,3 +57,38 @@ $('.prev').on('click', function() {
     move(next, '-100%', 0);
 });
 
+// 페이지네이션
+function move1(i){
+    if(current==i) return;
+
+    let currentEl=banner.eq(current); //현재값
+    let nextEl=banner.eq(i); // 내가 클릭하는 값
+    currentEl.css('left', 0).stop().animate({left:'-100%'}, 500);
+    nextEl.css('left', '100%').stop().animate({left:0}, 500);
+
+    current = i;
+}
+
+function move2(i){
+    if(current==i) return;
+
+    let currentEl=banner.eq(current); //현재값
+    let nextEl=banner.eq(i); // 내가 클릭하는 값
+    currentEl.css('left', 0).stop().animate({left:'100%'}, 500);
+    nextEl.css('left', '-100%').stop().animate({left:0}, 500);
+
+    current = i;
+}
+
+btn.click(function(){
+    let tg = $(this);
+    let i=tg.index();
+
+    btn.removeClass('on');
+    tg.addClass('on');
+    if( current > i ){
+        move2(i);
+    } else {
+        move1(i);
+    }
+});
