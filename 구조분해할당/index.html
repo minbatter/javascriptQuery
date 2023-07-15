@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구조분해할당</title>
+</head>
+<body>
+    <h2>구조분해할당</h2>
+    <p>배열리아 객체의 속정을 분해해서 그값을 변수에 담을수 있게하는 표현식</p>
+    <script>
+        let [x, y] = [1,2];
+        console.log(x);
+        console.log(y);
+
+        let str = 'kim-jil-dong';
+        let [user1, user2, user3] = str.split("-");
+        console.log(user1);
+        console.log(user2);
+        console.log(user3);
+
+        let [a=0, b=0, c=0] = [3,4]; // 기본값 설정 undefined 방지
+        console.log(a);
+        console.log(b);
+        console.log(c);
+
+        let [user4, ,user5] = ['tom', 'angel', 'mike'];
+        console.log(user4);
+        console.log(user5);
+
+        //let [k,j] = [j,k];
+        console.log('==============================================');
+        // 객체구조분해할당
+        let user6 = {
+            name:'jee',
+            age:30
+        };
+        
+        let nm = user6.name;
+        let ag = user6.age;
+        console.log(nm);
+
+        let {name, age} = user6;
+        console.log(name);
+        console.log(age);
+
+
+
+    </script>
+</body>
+</html>
