@@ -1,0 +1,16 @@
+.productBox {width: 100%;}
+.productBox .container {width: 1150px; margin: 50px auto; height: 250px; position: relative;
+    
+}
+.productBox .container .left{font-size: 50px; position: absolute;  left:  0; top:80px;}
+.productBox .container .right{font-size: 50px; position: absolute; right: 0; top:80px;}
+
+.productBox .container .area{width: 1050px; overflow: hidden; margin-left: 50px;}
+
+.productBox .container .area ul{width: 1500px; height: 250px; background-color: #fff; position: relative;
+    left:0; top:0; }
+.productBox .container .area ul li {float: left; margin: 0 5px; height: 250px; background-color: #fff;} 
+.productBox .container .area ul li img{width: 200px; height: 200px;}
+.productBox .container .area ul li .name {display: block; font-size: 11px; text-align: center; padding: 5px 0; width: 200px;}
+.productBox .container .area ul li .price{display: block; font-size: 14px; text-align: center; padding: 5px 0; width: 200px;}
+
