@@ -2,19 +2,48 @@
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
 
 /* 공통속성 */
-.container{ width: 100%; max-width: 1090px; margin: 0 auto; height: inherit;}
+.container{ max-width: 1090px; margin: 0 auto; height: inherit;}
+
+a{ text-decoration: none; }
 
 body{font-family: 'Nanum Gothic', sans-serif; background: #222;}
 
 #wrap{width: 100%;}
+
 .mobile-menu{
     width: 100%;
     height: 100vh;
-    background-color: #222;
+    background-color:red;
     position: fixed;
-    top: 0;left: -100%;
+    top: 0;
+    /* left: -100%; */
+    left: 0;
     z-index: 4;
 }
+
+.mobile-menu>div {
+    padding: 0 30px;
+    box-sizing: border-box;
+}
+.mobile-menu>div .mobile-modal-menu-bar {}
+.mobile-menu>div .mobile-modal-menu-bar .modal-logoBt-wrap     {}
+.mobile-menu>div .mobile-modal-menu-bar .modal-logoBt-wrap a   {}
+.mobile-menu>div .mobile-modal-menu-bar .modal-appBar-wrap     {}
+.mobile-menu>div .mobile-modal-menu-bar .modal-appBar-wrap a   {}
+.mobile-menu>div .mobile-modal-menu-bar .modal-appBar-wrap a i {}
+.mobile-menu>div .mobile-modal-menu-bar .modal-appBar-wrap a .appbar-line1 {}
+.mobile-menu>div .mobile-modal-menu-bar .modal-appBar-wrap a .appbar-line2 {}
+
+.mobile-menu>div .mobile-modal-menu-list {}
+.mobile-menu>div .mobile-modal-menu-list ul {}
+.mobile-menu>div .mobile-modal-menu-list ul li {}
+.mobile-menu>div .mobile-modal-menu-list ul li a {}
+
+.mobile-menu>div .mobile-modal-menu-footer {}
+.mobile-menu>div .mobile-modal-menu-footer p {}
+.mobile-menu>div .mobile-modal-menu-footer .mobile-modal-menu-footer-button {}
+.mobile-menu>div .mobile-modal-menu-footer .mobile-modal-menu-footer-button button {}
+.mobile-menu>div .mobile-modal-menu-footer .mobile-modal-menu-footer-sns {}
 
 #header {
     width: 100%;    
@@ -22,10 +51,13 @@ body{font-family: 'Nanum Gothic', sans-serif; background: #222;}
 
 .header-mobile-menu {
     width: 100%;
-
+    display: none;
+    position: relative;
+    top: 0; left: 0;
 }
 
 .header-mobile-menu .header-app-menu{
+    
     width: 100%;
     height: 67px;
     border-bottom: 1px solid rgba(255,255,255, .15);
@@ -42,16 +74,76 @@ body{font-family: 'Nanum Gothic', sans-serif; background: #222;}
 .header-mobile-menu .header-app-menu .app-bar-wrap {
     width: 30px;
     height: 30px;
-    background: red;
+    
+    position: relative;
 }
 
-.header-mobile-menu .header-app-menu .app-bar-wrap a {}
-.header-mobile-menu .header-app-menu .app-bar-wrap i {}
-.header-mobile-menu .header-app-menu .app-bar-wrap .appbar-line1{}
-.header-mobile-menu .header-app-menu .app-search-wrap{}
+.header-mobile-menu .header-app-menu .app-bar-wrap a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.header-mobile-menu .header-app-menu .app-bar-wrap i {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
 
+    background: #000;
+    
+    left: 0;
+    
+}
+.header-mobile-menu .header-app-menu .app-bar-wrap .appbar-line1 {
+    top: 0;
+}
+.header-mobile-menu .header-app-menu .app-bar-wrap .appbar-line2 {
+    top: 50%;
+}
+.header-mobile-menu .header-app-menu .app-bar-wrap .appbar-line3 {
+    top: 100%;
+}
+.header-mobile-menu .header-app-menu .app-search-wrap a .fa-search{
+    color: red;
+    font-size: 20px;
+}
+
+#header>.container{position: relative;}
+
+aside{ 
+position: absolute; right: 0; top: 10px;
+}
+
+aside span{ position: relative; display: inline-block;
+    text-align: center;
+}
+aside span:not(:last-child):after{ 
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 12px;
+    background: #eee;
+    top: 3px; right: 0;
+}
+
+aside span a{color: #eee; padding: 0 20px;}
+aside span a:last-child a {padding-right: 0;}
+
+.header-logoNav {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav>span>a{ color: #eee; font-size: 18px; padding: 10px;}
 
 @media screen and (max-width: 1090px) {
     .container{width: 100%;}
-    
+    #header>.container{width: 100%;}
+    .header-mobile-menu {
+        display: block;
+    }
+    aside, .header-logoNav {display: none;}
 }
+
