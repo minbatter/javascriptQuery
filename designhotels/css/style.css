@@ -6,6 +6,9 @@
 
 a{ text-decoration: none; color: #eee;}
 
+/* ir효과 - 접근성을 위해 숨김 */
+.ir_so{overflow: hidden; width: 0; height: 0; position: absolute; line-height: 0; text-indent: -99999em;}
+
 body{font-family: 'Nanum Gothic', sans-serif; background: #222;}
 
 #wrap{width: 100%;}
@@ -240,11 +243,55 @@ text-align: center;
     color :#fff;
 }
 
-#section1>div .m-icon-footer .icon-footer-left {}
-#section1>div .m-icon-footer .icon-footer-center {}
-#section1>div .m-icon-footer .icon-footer-right {}
+#section2{width: 100%; background-image: linear-gradient(to right, #384144, #384144 50%,#727b77 50%);}
+#section2>div{}
+#section2>div ul{display: flex;}
+#section2>div ul>li{flex-basis: 50%;}
+#section2>div ul>li>div{padding: 70px 80px;}
+#section2>div ul>li>div>.section2-title    {padding-bottom: 30px;}
+#section2>div ul>li>div>.section2-title h2 {
+    color: #fff;
+    border-bottom: 1px solid rgba(255,255,255, .3);
+    padding-bottom: 5px;
+    font-size: 24px;
+    font-weight: bold;
+}
+#section2>div ul>li>div>.section2-content  {}
+#section2>div ul>li>div>.section2-content p{ 
+    line-height: 140%; 
+    text-align: justify;
+    font-size: .8rem;
+    color: rgba(255,255,255, .6);
+}
 
+#section3{width: 100%;}
+.tabMenu{
+    width: 100%;
+    height: 50px;
+    background: #2c3437;
 
+}
+.tabMenu .container{
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+}
+.tabMenu .container .filter-form{}
+.tabMenu .container .filter-form .form-item{}
+.tabMenu .container .filter-form .form-item input{
+    display: none;
+}
+/* ~ 동위 선택자 */
+.tabMenu .container .filter-form .form-item input:checked ~ label { 
+    background: #312f2e;
+    color: rgba(255,255,255, .8);
+}
+
+.tabMenu .container .filter-form .form-item label{
+    padding: 16px 20px;
+    color: rgba(255,255,255, .5);
+}
 
 
 @media screen and (max-width: 1090px) {
