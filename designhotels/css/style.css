@@ -293,6 +293,128 @@ text-align: center;
     color: rgba(255,255,255, .5);
 }
 
+.gallery .gallery-wrap {
+    display: flex;
+    flex-wrap: wrap; 
+    width:100%; 
+    overflow: hidden;
+
+}
+.gallery .gallery-wrap li { 
+    flex-basis: 33.3333%;
+    overflow: hidden;
+    height: 600px;
+ }
+.gallery .gallery-wrap li div {
+    width: 100%;
+}
+.gallery .gallery-wrap li div a {
+    display: block;
+    width: 100%;
+    position: relative;
+}
+.gallery .gallery-wrap li div a .g-video{
+    display: block;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.gallery .gallery-wrap li div a .g-video video,
+.gallery .gallery-wrap li div a .g-video img {
+    width: 105%;
+    display: block;
+    transform: scale(1);
+    transition: .3s;
+    height: 105%;
+
+}
+
+.gallery .gallery-wrap li div a:hover .g-video video,
+.gallery .gallery-wrap li div a:hover .g-video img {
+
+    transform: scale(1.2);
+}
+
+.gallery .gallery-wrap li div a .g-color{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: block;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0);
+    transition: .3;
+}
+
+.gallery .gallery-wrap li div a:hover .g-color{
+    background: rgba(0,0,0,.7);
+}
+
+.gallery .gallery-wrap li div a .g-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    /* transition: .3s; */
+    opacity: 0;
+}
+
+
+.gallery .gallery-wrap li div a .g-title > span{
+    display: block;
+    padding-bottom: 20px;
+    margin-top: 15px;
+    opacity: 0;
+}
+.gallery .gallery-wrap li div a .g-title > span > strong{
+    color: #fff;
+    font-size: 21px;
+    font-weight: bold;
+}
+.gallery .gallery-wrap li div a .g-title > span > b{
+    color: #fff;
+    font-size: 14px;    
+}
+.gallery .gallery-wrap li div a .g-title > span > .exploreBt{
+    color: #fff;
+}
+
+.gallery .gallery-wrap li div a:hover .g-title{opacity: 1;} 
+.gallery .gallery-wrap li div a:hover .g-title > span:nth-child(1){
+    opacity: 1;
+    transition: .3s;
+}
+.gallery .gallery-wrap li div a:hover .g-title > span:nth-child(2){
+    opacity: 1;
+    transition: .9s;
+}
+.gallery .gallery-wrap li div a:hover .g-title > span:nth-child(3){
+    opacity: 1;
+    transition: 1.2s;
+}
+
+.loadMore{
+    width: 100%;
+    padding: 80px 0;
+    text-align: center;
+}
+.loadMore .loadMoreBt{
+    cursor: pointer;
+    width: 200px;
+    height: 45px;
+    font-size: 18px;
+    color: #dee4e3;
+    background: #384243;
+    border: 1px solid #5e686a;
+}
+.loadMore .loadMoreBt:hover{
+    color: #384244;
+    background: #dee4e3;
+    border: 1px solid #dee4e3;
+}
 
 @media screen and (max-width: 1090px) {
     .container{width: 100%;}
