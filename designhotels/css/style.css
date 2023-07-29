@@ -132,8 +132,6 @@ body{font-family: 'Nanum Gothic', sans-serif; background: #222;}
     padding: 0 30px;
 }
 
-.header-mobile-menu .header-app-menu h1{}
-
 .header-mobile-menu .header-app-menu .app-bar-wrap {
     width: 30px;
     height: 30px;
@@ -244,7 +242,6 @@ text-align: center;
 }
 
 #section2{width: 100%; background-image: linear-gradient(to right, #384144, #384144 50%,#727b77 50%);}
-#section2>div{}
 #section2>div ul{display: flex;}
 #section2>div ul>li{flex-basis: 50%;}
 #section2>div ul>li>div{padding: 70px 80px;}
@@ -256,7 +253,7 @@ text-align: center;
     font-size: 24px;
     font-weight: bold;
 }
-#section2>div ul>li>div>.section2-content  {}
+
 #section2>div ul>li>div>.section2-content p{ 
     line-height: 140%; 
     text-align: justify;
@@ -308,8 +305,7 @@ text-align: center;
     align-items: center;
     justify-content: center;
 }
-.tabMenu .container .filter-form{}
-.tabMenu .container .filter-form .form-item{}
+
 .tabMenu .container .filter-form .form-item input{
     display: none;
 }
