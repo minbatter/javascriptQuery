@@ -1,0 +1,18 @@
+#wrap{width: 100%; max-width: 1440px; margin: 0 auto;}
+.section{width: 100%; height: 900px;}
+.section1{background: #a5bb56;}
+.section2{background: #dc6a12; display: flex; justify-content: space-between; position: relative; overflow: hidden;}
+.section3{background: #926c77; display: flex; justify-content: space-between; position: relative; overflow: hidden;}
+.section4{background: #1f8f6d; height: auto; padding: 60px 50px; box-sizing: border-box; position: relative;}
+.section5{background: #bbb456;}
+
+.section2 .left{width: 50%; height: 100%; padding: 50px; box-sizing: border-box; position: absolute; left: -50%;}
+.section2 .right{width: 50%; height: 100%; padding: 50px; box-sizing: border-box; position: absolute; right: -50%;}
+
+.section3 .left{width: 50%; height: 100%; background: yellow;  display: none;}
+.section3 .right{width: 50%; height: 100%; background: purple; display: none;}
+
+
+.section4 .box{width: 100%; height: 500px; background: #ddd; margin-bottom: 50px; position: relative; bottom: -300px}
+.section4 .box .imgbox{width: 530px; height: 400px; position: absolute; top: -30px; left: 20px; background: aquamarine;}
+.section4 .box .txtbox{position: absolute; right: 0; width: 700px; top: 20px}
