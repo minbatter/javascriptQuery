@@ -3,20 +3,27 @@ const $loadMoreBtn=$('.loadMoreBt');
 let $addItemCount = 3;
 let $added=0;
 let $allData=[];
+let $filter=$('#gallery-filter');
+let $filterdData=[];
+
 
 $.getJSON("./data/video.json", function(data) {    
     $allData=data;
     //console.log($allData);
+    $filterdData = $allData;
+
     addItem();
     //console.log(a);
-    $loadMoreBtn.click(addItem)
+    $loadMoreBtn.click(addItem);
+
+    $filter.on('change', 'input[type="radio"]', filterItems);
 });
 
 function addItem(data) {
     let element = [];
     let slicedData;
 
-    slicedData=$allData.slice($added, $added += $addItemCount);
+    slicedData=$filterdData.slice($added, $added += $addItemCount);
     //console.log(slicedData);
     $.each(slicedData, function(index, item) {
         const fileExtension = item.video.split('.').pop().toLowerCase();
@@ -46,15 +53,31 @@ function addItem(data) {
 
         element.push($(itemHTML).get(0)); // DOM 객체로 만들어 넣어야된다.
 
-        if( $added < $allData.length ) {
+        if( $added < $filterdData.length ) {
             $loadMoreBtn.text('Load More');
         } else {
-            $loadMoreBtn.text('End');
+            $loadMoreBtn.css({background:'#384244', color:'#dee4e3', 
+            border:'1px solid #5e686a'}).text('END');
         }
 
     });
 
-    $container.append(element);
+    $container.append(element);    
+}
 
-    
+function filterItems(){
+   let key=$(this).val();
+   $filterdData = [];
+   $added=0;
+   $container.empty();
+
+   if( key=='all' ) {
+       $filterdData = $allData;
+   } else {
+       $filterdData = $.grep($allData, function(item) {
+            return item.category === key;
+       });
+   }
+
+   addItem(true);
 }

@@ -137,3 +137,15 @@ $('.m-again').on({click:function(){
 
     setId = setInterval(videoTimeCountFn, 1000);
 }});
+
+const TrendWrap=$('.tranding-wrap');
+let offset=TrendWrap.offset().left;
+//console.log(offset)
+TrendWrap.on({mousemove(e){
+    //console.log(e.pageX);
+    if(e.pageX >= 1560) {
+        return false;
+    } else {
+        $(this).css({left: -e.pageX})
+    }
+}})

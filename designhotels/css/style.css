@@ -264,7 +264,38 @@ text-align: center;
     color: rgba(255,255,255, .6);
 }
 
-#section3{width: 100%;}
+#section3{
+    width: 100%;
+    position: relative;
+    background: #fff;
+    padding: 150px 0;
+    overflow: hidden;
+}
+
+#section3>div {width: 100%;}
+#section3>div h2 {text-align: center; font-size: 24px;
+    color: #594b4b; margin-bottom: 50px;
+    font-weight: bold;
+}
+
+#section3>div .tranding-wrap { width: 100%; height: 362px;
+    position: relative;
+ }
+#section3>div .tranding-wrap> ul { position: absolute; height: 100%; top: 0; left: 0; 
+    width: calc(290px*12); display: flex; flex-flow: row nowrap;
+}
+#section3>div .tranding-wrap ul>li {
+    width: 290px;
+    height: 100%;
+}
+#section3>div .tranding-wrap ul>li img{
+    width: 100%;
+    display: block;
+}
+
+#section4{
+    width: 100%;
+}
 .tabMenu{
     width: 100%;
     height: 50px;
@@ -303,7 +334,7 @@ text-align: center;
 .gallery .gallery-wrap li { 
     flex-basis: 33.3333%;
     overflow: hidden;
-    height: 600px;
+    height: 100%;
  }
 .gallery .gallery-wrap li div {
     width: 100%;
@@ -400,6 +431,7 @@ text-align: center;
     width: 100%;
     padding: 80px 0;
     text-align: center;
+    background: #7d8586;
 }
 .loadMore .loadMoreBt{
     cursor: pointer;
